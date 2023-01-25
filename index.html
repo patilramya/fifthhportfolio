@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            background-color: blanchedalmond;
+            color: blue;
+            text-align: center;
+        }
+        h1:hover{
+            text-decoration: underline;
+        }
+        h2{
+            background-color: brown;
+            color: aqua;
+            text-align: center;
+        }
+        h2:hover{
+            background-color: blue;
+            color:yellow;
+            text-decoration: underline;
+            margin-right: 50%;
+            text-shadow: 3px 3px white;
+            transition: 1s;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+        marquee{
+            background-color: blue;
+            color: cornsilk;
+            margin-top: 100px;
+            margin-top: 15px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $("p").hide();
+            });
+            
+        });
+        $(document).ready(function(){
+            $("#show").click(function(){
+                $("p").show();
+            });
+            
+        });
+        $(document).ready(function(){
+            $("#fadein").click(function(){
+                $("#p1").fadeIn();
+            });
+        });
+        $(document).ready(function(){
+            $("#fadeout").click(function(){
+                $("#p1").fadeOut();
+            });
+        });
+        $(document).ready(function(){
+            $("#fadeto").click(function(){
+                $("#p1").fadeTo('1000',0.6);
+            });
+        });
+        $(document).ready(function(){
+            $("#slide").click(function(){
+                $("img").slideUp(2000).slideDown(2000);
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>JQuery Elements</h1>
+    <h2>Hide and Show</h2>
+    <div style="margin-left: 300px; margin-right: 300px;">
+        <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+        <button id="hide" style="margin-left: 250px; padding: 10px; background-color: blueviolet; color: white;">HIDE</button>
+        <button id="show" style="margin-left: 20px; padding: 10px; background-color: black; color: white;">SHOW</button>
+    </div>
+    <h2>FADE OUT and FADE IN</h2>
+    <div style="margin-left: 300px; margin-right: 300px;" id="div1">
+        <p style="background-color: aquamarine; color: brown;" id="p1">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+        <button id="fadeout" style="margin-left: 200px; padding: 10px; background-color: blueviolet; color:white;">FADE OUT</button>
+        <button id="fadein" style="margin-left: 10px; padding: 10px; background-color: blueviolet; color: white;">FADE IN</button>
+        <button id="fadeto" style="margin-left: 10px; padding: 10px; background-color: blueviolet; color: white;">FADE TO</button>
+    </div>
+    <h2>Sliding</h2>
+    <div style="margin-left: 500px; margin-right: 500px; ">
+        <img src="apple.png">
+        <button id="slide" style="margin-left: 50px; padding: 10px; background-color: green; color: yellow;">SLIDE UP/DOWN</button>
+    </div>
+    <marquee>Thank you... Visit Again</marquee>
+</body>
+</html>
